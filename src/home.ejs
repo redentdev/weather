@@ -1,0 +1,13 @@
+<%- include("meta.ejs") %>
+
+<title>Reweather | <%= selectedSehir %></title>
+
+<select name="sehirSecim" id="sehirSecim">
+    <% sehirler.forEach(sehir => { 
+        if(sehir == "İstanbul") { %>
+            <option name="istanbul" value="istanbul" selected>İstanbul</option>
+        <% } else { %>
+            <option name="<% sehir.toLowerCase() %>" value="<% sehir.toLowerCase() %>""><%= sehir %></option>
+        <% } %>
+    <% }) %>
+</select>
